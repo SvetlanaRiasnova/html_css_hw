@@ -1,47 +1,119 @@
+* {
+    box-sizing: border-box;
+}
+
+.top {
+    width: 1920px;
+    margin: 0 auto;
+}
+
 .header {
-    margin-top:  40px;
+    margin: 0 auto;
+    padding-top: 51px;
+    padding-bottom: 73px;
+    width: 1171px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 a {
     text-decoration: none;
+
 }
 
 .active {
     color: #F25822;
+    font-family: Gilroy-SemiBold;
 }
 
 .header_item {
     color: #000000;
+    font-size: 14px;
+    font-weight: 600;
+    font-family: Outfit;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
+
+.header__menu {
+    padding-top: 11px;
+    padding-bottom: 14px;
+    display: flex;
+    justify-content: space-around;
+    gap: 30px;
+}
+
 .active {
     color: #F25822;
 }
 
+.top__content {
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
+    width: 1171px;
+    gap: 40px;
+}
+
 .top_header {
     color: black;
+    font-family: Outfit;
     font-size: 60px;
+    font-weight: 700;
+}
+
+/*эллипс на заднем фоне заголока реализовала через img, не корректно?*/
+.top__info_ellips {
+    width: 314px;
+    height: 76px;
+    position: absolute;
+    margin-top: 110px;
+    margin-left: -28px;
 }
 
 .top_description {
-    color: #888888;
+    color: #888;
+    padding-right: 110px;
+    padding-bottom: 37px;
+    font-family: Outfit;
     font-size: 20px;
+    font-weight: 500px;
+}
+
+.top__info_buttons {
+    width: 302px;
 }
 
 .top__action_btn {
     width: 140px;
     height: 50px;
+    border: none;
     border-radius: 50px;
     background: #F25822;
     box-shadow: 4px 4px 8px 0px rgba(242, 88, 34, 0.20);
-    color: #FFFFFF;
+    color: #FFF;
+    font-family: Outfit;
+    font-weight: 700px;
+    font-size: 15px;
 }
 
 .top__video_btn {
     color: #AAA;
+    margin-left: 27px;
     font-size: 15px;
+    font-family: Outfit;
+    font-weight: 700px;
+}
+
+.top_image {
+    width: 544.814px;
 }
 
 .top__logos {
+    margin: 0 auto;
     padding-top: 97px;
     padding-bottom: 96px;
+    width: 1200px;
+    display: flex;
+    gap: 48px;
 }
