@@ -48,8 +48,6 @@
     width: 100%;
     align-self: center;
     border-left: 12px solid #F16D7F;
-}
-.intro__header {
     padding-left: 16px;
     max-height: 93px;
     display: flex;
@@ -79,9 +77,6 @@ h2 {
 
 /* блок offer*/
 
-.container {
-    max-width: 1140px;
-}
 .offers {
     padding-top: 65px;
     padding-bottom: 96px;
@@ -252,4 +247,83 @@ h2 {
         width: 100%;
     }
     
+}
+
+/* media 320-767*/
+@media (min-width: 320px) and (max-width: 767px) {
+
+    .header__container {
+        max-width: 100%;
+        padding-right: 16px;
+        padding-left: 16px;
+        justify-content: space-between;
+    }
+    .container, .intro__container {
+        max-width: 375px;
+    }
+    .user__profile, .cart, .intro__image {
+        display: none;
+    }
+    .intro {
+        width: 100%;
+        min-height: 363px;
+        display: flex;
+    }
+    .intro__header {
+        max-width: fit-content;
+        display: flex;
+    }
+    h1 {
+        font-size: 38px;
+    }
+    h2 {
+        font-size: 20px;
+    }
+    .offers {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .offer__card {
+        margin: 0 auto;
+        width: 343px;
+        height: 247px;
+    }
+
+    .offer_img {
+        width: 100%;
+        height: 100%;
+    }
+
+    .large {
+        width: 343px;
+        height: 111px;
+
+    }
+    
+    .large .offer_img  {
+        width: 100%;
+        height: 116.043px;
+    }
+    .offer_header {
+        margin-top:  -10px;
+    }
+    .products {
+        padding-bottom: 96px;
+    }
+    .prod_block_description {
+        padding-bottom: 64px;
+    }
+    .product__cards {
+        padding-bottom: 40px;
+        display: grid;
+        grid-template-columns: repeat(1, auto);
+        grid-gap: 16px;
+    }
+    .product__cards {
+        padding-bottom: 40px;
+    }
+    .prod_img {
+        width: 100%;
+    }
 }
