@@ -342,6 +342,9 @@ button[type=submit] {
 	align-items: center;
 	margin: 0 auto;
 }
+.form input {
+    outline:none;
+}
 .footer {
     max-width: 1600px;
     padding-left: 235px;
