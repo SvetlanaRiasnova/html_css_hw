@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
 
-
+  
 /*блок header*/
 .header {
     background-color: #222222;
@@ -76,30 +76,47 @@ h2 {
 }
 
 /* modal menu*/
+.modal__menu_list a {
+    text-decoration:none;
+    color: #6F6E6E;
+  } 
 .modal_menu {
     padding: 32px;
     width: 232px;
-    height: 80%;
+    min-height: 634px;
     position: absolute;
     top: 75px;
     right: 0px;
     background-color: #FFFFFF;
 }
-
+.menu_header {
+    color: #F16D7F ! important;
+    font-size: 14px;
+    padding-left: 32px;
+    padding-bottom: 12px;
+}
 .modal__menu_header {
     font-size: 14px;
     font-family: "Lato", sans-serif;
     text-transform: uppercase;
     padding-bottom: 24px;
+    padding-left: 33px;
 }
-
 .modal__menu_list {
     display: flex;
     flex-direction: column;
     row-gap: 20px;
 }
-/* блок offer*/
+.modal__menu_items {
+    display: grid;
+    gap: 11px;
+    padding-bottom: 12px;
+}
+.modal__menu_item {
+    padding-left: 53px;
+}
 
+/* блок offer*/
 .offers {
     padding-top: 65px;
     padding-bottom: 96px;
@@ -115,7 +132,6 @@ h2 {
     height: 100%;
     position: relative;
 }
-
 .offer_img {
     position: absolute;
 }
@@ -183,27 +199,24 @@ h2 {
     position: relative;
     display: flex;
 }
-
 .prod_back {
-    /* display: block; */
+    display: block;
     width: 100%;
     height: 100%;
     background-color:#3A3838;
     position: absolute;
-    /* z-index: 10; */
+    z-index: 10;
     opacity: 0;
 }
-
 .prod_back:hover {
     opacity: 0.8;
 }
-
 .prod_img_btn {
     position: absolute;
     display: flex;
     width: 139px;
     height: 44px;
-    /* z-index: 21; */
+    z-index: 10;
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
@@ -214,7 +227,6 @@ h2 {
     gap: 11px;
     opacity: 0;
 }
-
 .prod_img_btn:hover {
     opacity: 1;
 }
@@ -245,7 +257,6 @@ h2 {
     padding:   110px 230px 97px 230px;
     justify-content: space-evenly;
 }
-
 .advantages__card {
     width: 360px;
     display: flex;
@@ -254,19 +265,16 @@ h2 {
 	justify-content: center;
 	text-align: center;
 }
-
 .advantages__title, .advantages__descr {
     font-size: 20px;
     color: #FBFBFB;
     font-family: "Lato", sans-serif;
 }
-
 .advantages__descr {
     font-size: 14px;
 }
 
 /* block subscribe*/
-
 .subscribe {
     padding-right: 230px;
     padding-left: 230px;
@@ -289,7 +297,6 @@ h2 {
 	justify-content: center;
 	text-align: center;
 }
-
 .subscribe_text {
     font-size: 20px;
     color: #222224;
@@ -302,7 +309,6 @@ h2 {
     justify-content: center;
     text-align: center;
 }
-
 .action_header, .action_description {
     font-size: 24px;
     color: #222224;
@@ -313,14 +319,12 @@ h2 {
     font-size: 18px;
     margin-top: 0px;
 }
-
 input[type=text] {
 	flex-grow: 1;
 	padding: 19px;
     border-radius: 50px 0 0 50px;
     background-color: #E1E1E1;border-style: none;
 }
-
 button[type=submit] {
 	padding: 19px;
     border-style: none;
@@ -328,7 +332,6 @@ button[type=submit] {
 	background: #F16D7F;
 	border-radius: 0 50px 50px 0;
 }
-
 .form {
 	width: 356px;
     border-style: none;
@@ -339,7 +342,6 @@ button[type=submit] {
 	align-items: center;
 	margin: 0 auto;
 }
-
 .footer {
     max-width: 1600px;
     padding-left: 235px;
@@ -350,9 +352,24 @@ button[type=submit] {
     align-items: center;
     justify-content: space-between;
 }
-
 .footer__text {
     color: #FBFBFB;
+}
+.footer__icons {
+    display: flex;
+    flex-direction: row;
+    gap: 7px;
+}
+.icons_hover {
+    display: flex;
+    width: 32px;
+    height: 32px; 
+    background-color: #F16D7F;
+    position: absolute;
+    opacity: 0;
+}
+.icons_hover:hover {
+    opacity: 1;
 }
 /* media 768-1024*/
 @media (min-width: 768px) and (max-width: 1024px) {
@@ -361,11 +378,9 @@ button[type=submit] {
         padding-left: calc(50% - 376px);
         padding-right: calc(50% - 376px);
     }
-
     .intro__container {
         justify-content: start;
     }
-
     .intro__image {
         width: 50%;
     }
@@ -383,8 +398,6 @@ button[type=submit] {
     .container {
         max-width: 768px;
     }
-
-
     .offers {
         max-width: 768px;
         padding-top: 65px;
@@ -400,7 +413,6 @@ button[type=submit] {
         width: 232px;
         position: relative;
     }
-    
     .offer_img {
         position: absolute;
         width: 100%;
@@ -415,7 +427,6 @@ button[type=submit] {
     .offer__header_red {
         font-size: 24px;    
     }
-    
     .product__cards {
         padding-bottom: 32px;
         display: grid;
@@ -425,17 +436,14 @@ button[type=submit] {
     .prod_block_description {
         padding-bottom: 72px;
     }
-
     .prod_img {
         width: 100%;
     }
-    
     .advantages {
         display: grid;
         gap: 48px;
         padding:   48px 204px 64px 204px;
     }
-
     .advantages__title {
         margin: 16px;
         padding-bottom: 0px;
@@ -464,7 +472,6 @@ button[type=submit] {
     .subscribe_text {
         margin: 0;
     }
-
     .footer {
         padding-left: 32px;
         padding-right: 32px;
@@ -506,24 +513,20 @@ button[type=submit] {
         display: flex;
         flex-direction: column;
     }
-
     .offer__card {
         margin: 0 auto;
         width: 343px;
         height: 247px;
     }
-
     .offer_img {
         width: 100%;
         height: 100%;
     }
-
     .large {
         width: 343px;
         height: 111px;
 
     }
-    
     .large .offer_img  {
         width: 100%;
         height: 116.043px;
@@ -549,7 +552,6 @@ button[type=submit] {
     .prod_img {
         width: 100%;
     }
-
     .advantages {
         display: grid;
         gap: 47px;
@@ -566,7 +568,6 @@ button[type=submit] {
         margin: 0px;
         padding-top: 0px;
     }
-
     .subscribe {
         padding:  64px 0px 109px 0px;
         display: flex;
@@ -587,7 +588,6 @@ button[type=submit] {
         font-size: 18px;
         padding: 0 10px;
     }
-
     .footer {
         padding: 43px 32px 9px 32px;
         flex-direction: column-reverse;
