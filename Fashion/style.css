@@ -76,10 +76,7 @@ h2 {
 }
 
 /* modal menu*/
-.modal__menu_list a {
-    text-decoration:none;
-    color: #6F6E6E;
-  } 
+
 .modal_menu {
     padding: 32px;
     width: 232px;
@@ -88,7 +85,23 @@ h2 {
     top: 75px;
     right: 0px;
     background-color: #FFFFFF;
+    opacity: 0;
 }
+.modal__top_part {
+    display: flex;
+    gap: 50px;
+}
+.modal__top_part a {
+    text-decoration:none;
+}
+.modal_menu:target {
+    opacity: 1;
+    pointer-events: auto;
+}
+.modal__menu_list a {
+    text-decoration:none;
+    color: #6F6E6E;
+  } 
 .menu_header {
     color: #F16D7F ! important;
     font-size: 14px;
