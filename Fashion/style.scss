@@ -4,14 +4,17 @@
 
 
 @import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
-
+html, body {
+    overflow-x: hidden;
+}
 
 /*блок intro*/
 .intro {
     background-color: #F1E4E6;
+    width: 100%;
     &__container {
         margin: 0 auto;
-        width: 1600px;
+
         display: flex;
         flex-direction: row;
         justify-content: center;
@@ -60,9 +63,10 @@ h2 {
     width: 232px;
     min-height: 634px;
     top: 75px;
-    right: -232px;
-    transition: right 0.5s;
+    right: -999px;
+    transition: right 0.6s;
     background-color: #FFFFFF;
+    box-shadow: 6px 4px 35px rgba(0, 0, 0, 0.21);
 }
 .modal__top_part {
     display: flex;

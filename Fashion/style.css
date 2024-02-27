@@ -32,7 +32,7 @@
   gap: 33px;
 }
 
-.burger_checkbox {
+#check {
   position: absolute;
   left: -999999px;
   visibility: hidden;
@@ -40,7 +40,7 @@
 
 #check:checked ~ .modal_menu {
   right: 0;
-  display: block;
+  z-index: 5;
 }
 
 .action, .subscribe_frase, .advantages__card, .add_to_cart_btn {
@@ -275,13 +275,17 @@
     display: none;
   }
 }
+html, body {
+  overflow-x: hidden;
+}
+
 /*блок intro*/
 .intro {
   background-color: #F1E4E6;
+  width: 100%;
 }
 .intro__container {
   margin: 0 auto;
-  width: 1600px;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -328,16 +332,16 @@ h2 {
 
 /* modal menu*/
 .modal_menu {
+  z-index: 50;
   position: absolute;
   padding: 32px;
   width: 232px;
   min-height: 634px;
   top: 75px;
-  right: -232px;
-  transition: right 0.5s;
+  right: -999px;
+  transition: right 0.6s;
   background-color: #FFFFFF;
-  z-index: 1;
-  display: none;
+  box-shadow: 6px 4px 35px rgba(0, 0, 0, 0.21);
 }
 
 .modal__top_part {
