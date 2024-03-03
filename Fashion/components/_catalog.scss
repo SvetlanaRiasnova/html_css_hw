@@ -1,0 +1,122 @@
+.filters {
+        height: 129px;
+        padding-top: 39px;
+        box-sizing: border-box;
+        display: flex;
+        gap: 30px;
+        margin-bottom: -50px;
+}
+.filter {
+    z-index: 10;
+    width: 360px;
+    padding-top: 13px;
+    box-sizing: border-box;
+    &[open]  {
+        box-shadow: 6px 4px 35px rgba(0, 0, 0, 0.21) ;
+        background: rgb(255, 255, 255);
+        z-index: 15;        
+    }
+    &[open] .filter__header, .filter__summary svg  {
+            color: $colorRed;
+    }
+    &[open] path {
+        fill: $colorRed;
+    }
+    &__summary {
+        display: flex;
+        align-items: center;
+        gap: 11px;
+        padding-bottom: 16px;
+        padding-left: 16px;
+        }
+    &__header {
+        color: rgb(0, 0, 0);
+        font-size: 14px;
+        font-weight: 600;
+        line-height: 17px;
+        }
+    &__content {
+        display: flex;
+        flex-direction: column;
+        gap: 18px;
+        z-index: 10;
+        padding: 0px 16px 16px;
+        background: #ffffff;
+    }
+    &__item {
+        &_heading {
+            display: flex;
+            color: rgb(111, 110, 110);
+            font-family: Lato;
+            font-size: 14px;
+            font-weight: 400;
+            padding: 8px 11px 11px 11px;
+            border-left: 5px solid $colorRed;
+            border-bottom: 1px solid rgb(235, 235, 235);
+            }
+            &[open] .filter__item_heading {
+                color: $colorRed;   
+            }
+            &_link-box {
+                display: flex;
+                flex-direction: column;
+                gap: 11px;
+                padding: 24px 16px;
+            }
+            &_link {
+                text-decoration: none;
+                color: rgb(111, 110, 110);
+                font-size: 14px;
+                font-weight: 400;
+                &:hover {
+                    color: $colorRed;
+                }
+            }
+    }
+}
+.sort {
+    padding-top: 12px;
+    display: flex;
+    gap: 27px;
+    &__details {
+        position: relative;
+    }
+    &__summary {
+        display: flex;
+        gap: 11px;
+        align-items: center;
+    }
+    &__heading {
+        color: rgb(111, 110, 110);
+        font-size: 14px;
+        font-weight: 400;
+        }
+    &__box{
+        display: flex;
+        flex-direction: column;
+        box-shadow: 6px 4px 35px 0px rgba(0, 0, 0, 0.21);
+        background: rgb(255, 255, 255);
+        padding: 7px 30px 11px 9px;
+        position: absolute;
+        gap: 6px;
+        top: 22px;
+        left: -9px;
+    }
+    &__checkbox {
+        color: rgb(111, 110, 110);
+        font-family: Roboto;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 16px;
+        display: flex;
+        gap: 9px;
+        align-items: center;
+    }
+}
+summary::-webkit-details-marker {
+    display: none;
+}
+.catalog__product {
+    box-sizing: border-box;
+    padding-top: 65px;
+}
