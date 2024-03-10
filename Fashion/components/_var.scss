@@ -7,3 +7,7 @@ $colorRed: #F16D7F;
     align-items: center;
 }
 
+@mixin flexColumn {
+    display: flex;
+    flex-direction: column;
+  }

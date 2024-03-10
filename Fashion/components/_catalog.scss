@@ -7,14 +7,18 @@
         margin-bottom: -50px;
 }
 .filter {
-    z-index: 10;
+    z-index: 15;
     width: 360px;
-    padding-top: 13px;
+
     box-sizing: border-box;
-    &[open]  {
-        box-shadow: 6px 4px 35px rgba(0, 0, 0, 0.21) ;
-        background: rgb(255, 255, 255);
-        z-index: 15;        
+    &_details {
+        padding-top: 13px;
+        position: relative;
+        &[open]  {
+            box-shadow: 6px 4px 35px rgba(0, 0, 0, 0.21) ;
+            background: rgb(255, 255, 255);
+            z-index: 15;
+        }
     }
     &[open] .filter__header, .filter__summary svg  {
             color: $colorRed;

@@ -1,0 +1,176 @@
+.cart {
+    padding-top: 96px;
+    padding-bottom: 128px;
+    display: flex;
+    gap: 128px;
+    &__cards {
+        width: 652px; 
+        @include flexColumn;
+        gap: 40px;
+        margin: 0;
+    }
+    &__card_box {
+        display: flex;
+        padding-right: 22px;
+        gap: 32px;
+        box-shadow: 17px 19px 24px 0px rgba(0, 0, 0, 0.13);
+    }
+    &__info {
+       padding-top: 22px;
+       padding-bottom: 20px;
+       @include flexColumn;
+       gap: 40px;
+       color: rgb(101, 101, 101);
+       font-size: 18px;
+       font-weight: 400;
+       line-height: 22px;
+    }
+    &__header{
+        color: rgb(34, 34, 34);
+        width: 262px;
+        font-size: 24px;
+        font-weight: 400;
+        line-height: 29px;
+        margin: 0;
+    }
+
+    &__description{
+        @include flexColumn;
+        gap: 6px;
+    }
+    &__quantity {
+        display: flex;
+        gap: 40px;
+    }
+    &__quantity_number {
+        border: 1px solid rgb(234, 234, 234);
+        width: 43.19px;
+        height: 24.12px;
+        text-align: center;
+    }
+    &__close {
+        padding-left: 22px;
+        padding-top: 28px;
+    }
+    &__cards_buttons{
+        padding-top: 32px;
+        display: flex;
+        justify-content: space-between;
+    }
+    &__cards_buttons button {
+        width: 235px;
+        height: 50px;
+        background: rgb(255, 255, 255);
+        border: 1px solid rgb(164, 164, 164);
+        &:hover {
+            background: rgb(241, 109, 127);
+            color: rgb(255, 255, 255);
+            border: none;
+        }
+    }
+    &__forms {
+        @include flexColumn;
+        gap: 57px;
+    }
+    &__forms_form{
+        @include flexColumn;
+        gap: 20px;
+    }
+    &__forms_heading {
+        color: rgb(34, 34, 34);
+        font-size: 16px;
+        font-weight: 300;
+        line-height: 19px;
+        margin: 0;
+        padding-top: 20px;
+    }
+    &__form_input {
+        width: 360px;
+        height: 45px;
+        background: rgb(255, 255, 255);
+        border: 1px solid rgb(164, 164, 164);
+        padding-left: 13px;
+        color: rgb(34, 34, 34);
+        font-size: 13px;
+        font-weight: 300;
+        line-height: 16px;
+        outline: none;
+    }
+    &__form_input:focus {
+        color: rgb(177, 177, 177);
+    }
+    &__form_input:not(:nth-last-child(1)) {
+        margin-bottom: 20px;
+    }
+    &__form_btn {
+        width: 101.41px;
+        margin-top: 2px;
+        height: 35px;
+        background: rgb(255, 255, 255);
+        color: rgb(74, 74, 74);
+        font-size: 11px;
+        font-weight: 300;
+        line-height: 13px;
+        border: 1px solid rgb(164, 164, 164);
+        cursor: pointer;
+        &:hover {
+            background: rgb(241, 109, 127);
+            color: rgb(255, 255, 255);
+            border: none;
+        }
+    }
+    &__total_info {
+        margin: 0;
+        width: 360px;
+        height: 214px;
+        background: rgb(245, 243, 243);
+        @include flexColumn;
+        align-items: center;
+        & hr {
+        width: 275px;
+        height: 1px;
+        background: rgb(226, 226, 226);
+        border: none;
+        margin-top: 21px;
+        margin-bottom: 17px;
+        }
+    }
+    &__price_info {
+        @include flexColumn;
+        width: 310px;
+        align-items: flex-end;
+        gap: 12px;
+        padding-top: 39px;
+        padding-right: 34px;
+    }
+    &__sub_total {
+        color: rgb(74, 74, 74);
+        font-size: 11px;
+        font-weight: 400;
+        line-height: 13px;
+    }
+    &__grand_total {
+        font-size: 16px;
+        font-weight: 700;
+        line-height: 19px;
+        color: #222222;
+    }
+    &__price_info .prod_price, .prod_price_black {
+        margin-left: 30px;
+    }
+    &__info_btn {
+        width: 273px;
+        height: 50px;
+        background: rgb(241, 109, 127);
+        color: rgb(255, 255, 255);
+        font-size: 16px;
+        font-weight: 300;
+        line-height: 19px;
+        border: none;
+    }
+    &__info_btn:hover {
+        border: 1px solid #F16D7F;
+        color: #F26376;
+        background-color: #FFFFFF;
+    }
+}

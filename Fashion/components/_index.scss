@@ -1,5 +1,5 @@
 
-@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
+// @import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
 
 html, body {
     overflow-x: hidden;
@@ -272,14 +272,16 @@ h2 {
 
 /* block subscribe*/
 .subscribe {
-    padding-right: 230px;
-    padding-left: 230px;
-    padding-top: 104px;
-    display: flex;
-    justify-content: space-evenly;
-    padding-bottom: 126px;
+    padding: 104px 230px 126px;
     background: linear-gradient(rgba(244, 244, 244, 0.7), rgba(244, 244, 244, 0.7)),
 		url(img/subscribe_img.png) bottom left/cover no-repeat;
+    &_container {
+        width: 1140px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 0 auto;
+    }
 }
 .sub_foto {
     width: 96px;
@@ -314,13 +316,13 @@ h2 {
     font-size: 18px;
     margin-top: 0px;
 }
-input[type=text] {
+.subscribe__mail {
 	flex-grow: 1;
 	padding: 19px;
     border-radius: 50px 0 0 50px;
     background-color: #E1E1E1;border-style: none;
 }
-button[type=submit] {
+.subscribe__button {
 	padding: 19px;
     border-style: none;
 	color: white;
@@ -368,229 +370,5 @@ button[type=submit] {
     fill: #F16D7F;
     &:last-child {
         fill: #F8F8F8;
-    }
-}
-
-/* media 768-1024*/
-@media (min-width: 768px) and (max-width: 1024px) {
-    .header__container, .intro__container, .container {
-        max-width: 768px;
-        padding-left: calc(50% - 376px);
-        padding-right: calc(50% - 376px);
-    }
-    .intro__container {
-        justify-content: start;
-    }
-    .intro__image {
-        width: 50%;
-    }
-    .intro__header {
-        width: 50%;
-        align-self: center;
-        border-left: 12px solid #F16D7F;
-    }
-    h1 {
-        font-size: 44px;
-    }
-    h2 {
-        font-size: 24px;
-    }
-    .container {
-        max-width: 768px;
-    }
-    .offers {
-        max-width: 768px;
-        padding-top: 65px;
-        padding-bottom: 106px;
-        display: grid;
-        grid-template-columns: repeat(3, 232px);
-        grid-template-rows: 167px 116px;
-        gap: 19px;
-        grid-row-gap: 30px;
-        justify-content: center;
-    }
-    .offer__card {
-        width: 232px;
-        position: relative;
-    }
-    .offer_img {
-        position: absolute;
-        width: 100%;
-    }
-    .offer_header {
-        font-size: 16px;
-    }
-    .large {
-        width: 734px;
-        grid-area: 2 / 1 / 3 / 4;
-    }
-    .offer__header_red {
-        font-size: 24px;    
-    }
-    .product__cards {
-        padding-bottom: 32px;
-        display: grid;
-        grid-template-columns: repeat(2, auto);
-        grid-gap: 16px;
-    }
-    .prod_block_description {
-        padding-bottom: 72px;
-    }
-    .prod_img {
-        width: 100%;
-    }
-    .advantages {
-        display: grid;
-        gap: 48px;
-        padding:   48px 204px 64px 204px;
-    }
-    .advantages__title {
-        margin: 16px;
-        padding-bottom: 0px;
-    }
-    .advantages__descr {
-        margin: 0px;
-        padding-top: 0px;
-    }
-    .subscribe {
-        padding-top: 64px;
-        padding-bottom: 140px;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        text-align: center;
-        align-items: center;
-        gap: 30px;
-        background: linear-gradient(rgba(244, 244, 244, 0.7), rgba(244, 244, 244, 0.7)),
-		url(img/subscribe_img.png) no-repeat;
-        background-size: cover;
-        background-position: 26% ;
-    }
-    .sub_foto {
-        width: 100%;
-    }
-    .subscribe_text {
-        margin: 0;
-    }
-    .footer {
-        padding-left: 32px;
-        padding-right: 32px;
-
-    }
-}
-
-/* media 375-767*/
-@media (min-width: 375px) and (max-width: 767px) {
-
-    .header__container {
-        max-width: 100%;
-        padding-right: 16px;
-        padding-left: 16px;
-        justify-content: space-between;
-    }
-    .container, .intro__container {
-        max-width: 375px;
-    }
-    .user__profile, .cart, .intro__image {
-        display: none;
-    }
-    .intro {
-        width: 100%;
-        min-height: 363px;
-        display: flex;
-    }
-    .intro__header {
-        max-width: fit-content;
-        display: flex;
-    }
-    h1 {
-        font-size: 38px;
-    }
-    h2 {
-        font-size: 20px;
-    }
-    .offers {
-        display: flex;
-        flex-direction: column;
-    }
-    .offer__card {
-        margin: 0 auto;
-        width: 343px;
-        height: 247px;
-    }
-    .offer_img {
-        width: 100%;
-        height: 100%;
-    }
-    .large {
-        width: 343px;
-        height: 111px;
-
-    }
-    .large .offer_img  {
-        width: 100%;
-        height: 116.043px;
-    }
-    .offer_header {
-        margin-top:  -10px;
-    }
-    .products {
-        padding-bottom: 96px;
-    }
-    .prod_block_description {
-        padding-bottom: 64px;
-    }
-    .product__cards {
-        padding-bottom: 40px;
-        display: grid;
-        grid-template-columns: repeat(1, auto);
-        grid-gap: 16px;
-    }
-    .product__cards {
-        padding-bottom: 40px;
-    }
-    .prod_img {
-        width: 100%;
-    }
-    .advantages {
-        display: grid;
-        gap: 47px;
-        padding:   48px 14px 81px 14px;
-    }
-    .advantages__card {
-        width: 348px;
-    }
-    .advantages__title {
-        margin: 16px;
-        padding-bottom: 0px;
-    }
-    .advantages__descr {
-        margin: 0px;
-        padding-top: 0px;
-    }
-    .subscribe {
-        padding:  64px 0px 109px 0px;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        text-align: center;
-        align-items: center;
-        gap: 59px;
-        background: linear-gradient(rgba(244, 244, 244, 0.7), rgba(244, 244, 244, 0.7)),
-		url(img/subscribe_img.png) cover no-repeat;
-        background-position: 25%  15%
-    }
-    .sub_foto {
-        width: 100%;
-        padding-bottom: 29px;
-    }
-    .subscribe_text {
-        font-size: 18px;
-        padding: 0 10px;
-    }
-    .footer {
-        padding: 43px 32px 9px 32px;
-        flex-direction: column-reverse;
-        gap: 40px;
     }
 }
