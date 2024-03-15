@@ -6,8 +6,7 @@
     <link rel="stylesheet" href="normalize.css">
     <link rel="stylesheet" href="fonts/stylesheet.css">
     <link rel="stylesheet" href="style.css">
-    <title>Cart</title>
-
+    <title>Registration</title>
 </head>
 <body>
     <div class="header">
@@ -80,82 +79,93 @@
     </div>
     <div class="breadcrumb">
         <div class="breadcrumb__container">
-            <h1 class="breadcrumb__header" >SHOPPING CART</h1>
+            <h1 class="breadcrumb__header" >REGISTRATION</h1>
         </div>
     </div>
-    <section class="cart container">
-        <div class="cart__cards">
-            <div class="cart__card_box">
-                <div class="cart__img">
-                    <img src="img/card3.svg" alt="">
-                </div>
-                <div class="cart__info">
-                    <h3 class="cart__header">
-                        MANGO  PEOPLE  <br> T-SHIRT
-                    </h3>
-                    <div class="cart__description">
-                        <span class="cart__price">Price: <span class="prod_price">$300</span> </span></span>
-                        <span class="cart__color">Color: Red</span>
-                        <span class="cart__size">Size: Xl	</span>
-                        <div class="cart__quantity">
-                            <span>
-                                Quantity:
-                            </span>
-                            <div class="cart__quantity_number">2</div>
-                        </div>
-                    </div>
-                </div>
-                <button class="cart__close" type="button">
-                    <img src="icons/close.svg" class="cart__close-btn" alt="close button">
+    <section class="registration container">
+        <div class="registration__form">
+            <form action="push" class="registration_form">
+                <h3 class="registration__name">Your Name</h3>
+                <input type="text"  id="firstName" placeholder="First Name" class="registration_form-input">
+                <input type="text"  id="lastName" placeholder="Last Name" class="registration_form-input">
+                <div class="registration__gender">
+                    <form action="#" class="registration__gender">
+                        <label>
+                            <input type="radio" name="gender" value="male">
+                            Male
+                        </label>
+                        <label>
+                            <input type="radio" name="gender" value="femail">
+                            Female
+                        </label>
+                    </form>
+                </div>    
+                <h3 class="registration__data">Login details</h3>
+                <input type="email" placeholder="Email" id="email" class="registration_form-input">
+                <input type="password"  id="assword" placeholder="Password" class="registration_form-input">
+                <p class="registration_text">Please use 8 or more characters, with at least 1 number and a mixture of uppercase and lowercase letters</p>
+                <button class="registration_button">JOIN NOW <svg width="17.000977" height="9.918610" viewBox="0 0 17.001 9.91861" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                    <path id="Vector" d="M11.54 0.208099C11.6058 0.14212 11.684 0.0897827 11.77 0.0540771C11.8561 0.0183716 11.9484 0 12.0415 0C12.1346 0 12.2269 0.0183716 12.313 0.0540771C12.399 0.0897827 12.4772 0.14212 12.543 0.208099L16.7928 4.45801C16.8589 4.5238 16.9111 4.60196 16.9469 4.68802C16.9825 4.77408 17.001 4.86633 17.001 4.9595C17.001 5.05267 16.9825 5.1449 16.9469 5.23096C16.9111 5.31702 16.8589 5.39517 16.7928 5.46097L12.543 9.71088C12.41 9.8439 12.2296 9.91861 12.0415 9.91861C11.8534 9.91861 11.673 9.8439 11.54 9.71088C11.407 9.57788 11.3323 9.39749 11.3323 9.20941C11.3323 9.0213 11.407 8.84091 11.54 8.70792L15.2898 4.9595L11.54 1.21106C11.474 1.14526 11.4218 1.06711 11.386 0.981049C11.3503 0.89502 11.3319 0.802765 11.3319 0.709595C11.3319 0.616425 11.3503 0.52417 11.386 0.43811C11.4218 0.352051 11.474 0.273895 11.54 0.208099Z" fill="#FFFFFF" fill-opacity="1.000000" fill-rule="evenodd"/>
+                    <path id="Vector" d="M0 4.95947C0 4.77161 0.074585 4.59146 0.20752 4.45862C0.340332 4.32578 0.520508 4.25116 0.708374 4.25116L15.583 4.25116C15.7709 4.25116 15.951 4.32578 16.0839 4.45862C16.2167 4.59146 16.2913 4.77161 16.2913 4.95947C16.2913 5.14734 16.2167 5.32748 16.0839 5.46033C15.951 5.59317 15.7709 5.66779 15.583 5.66779L0.708374 5.66779C0.520508 5.66779 0.340332 5.59317 0.20752 5.46033C0.074585 5.32748 0 5.14734 0 4.95947Z" fill="#FFFFFF" fill-opacity="1.000000" fill-rule="evenodd"/>
+                    </svg>
                 </button>
-            </div>
-            <div class="cart__card_box">
-                <div class="cart__img">
-                    <img src="img/card7.svg" alt="for_man">
-                </div>
-                <div class="cart__info">
-                    <h3 class="cart__header">
-                        MANGO  PEOPLE  <br> T-SHIRT
-                    </h3>
-                    <div class="cart__description">
-                        <span class="cart__price">Price: <span class="prod_price">$300</span> </span></span>
-                        <span class="cart__color">Color: Red</span>
-                        <span class="cart__size">Size: Xl	</span>
-                        <div class="cart__quantity">
-                            <span>
-                                Quantity:
-                            </span>
-                            <div class="cart__quantity_number">2</div>
-                        </div>
-                    </div>
-                </div>
-                <button class="cart__close" type="button">
-                    <img src="icons/close.svg" class="cart__close-btn" alt="close button">
-                </button>
-            </div>
-            <div class="cart__cards_buttons">
-                <button>CLEAR SHOPPING CART</button>
-                <button>CONTINUE SHOPPING</button>
-            </div>
+            </form>
         </div>
-        <div class="cart__forms">
-            <div class="cart__forms_form">
-                <h3 class="cart__forms_heading">SHIPPING ADRESS</h3>
-                <form class="cart__form">
-                    <input class="cart__form_input focus" type="text" placeholder="Bangladesh">
-                    <input class="cart__form_input" type="text" placeholder="State">
-                    <input class="cart__form_input" type="text" placeholder="Postcode / Zip">
-                    <button class="cart__form_btn">GET A QUOTE</button>
-                </form>
-            </div>
-            <div class="cart__total_info">
-                <div class="cart__price_info">
-                    <div class="cart__sub_total">SUB TOTAL  <span class="prod_price_black">$900</span> </div>
-                    <div class="cart__grand_total">GRAND TOTAL<span class="prod_price">$900</span></div>
-                </div>
-                <hr>
-                <button class="cart__info_btn">PROCEED TO CHECKOUT</button>
-            </div>
+        <div class="registration__loyalty">
+            <h3 class="registration__head">LOYALTY HAS ITS PERKS</h3>
+            <p class="registration__loyalty_text">Get in on the loyalty program where you can earn points and unlock serious perks. Starting with these as soon as you join:</p>
+            <ul class="registration__lists">
+                <li class="registration__list">
+                    <svg width="20.000000" height="16.000000" viewBox="0 0 20 16" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                        <desc>
+                                Created with Pixso.
+                        </desc>
+                        <defs/>
+                        <path id="Vector" d="M19.8 0L18.09 0C17.85 0 17.62 0.11 17.47 0.3L7.37 13.28L2.52 7.05C2.45 6.96 2.35 6.88 2.25 6.83C2.14 6.78 2.02 6.75 1.9 6.75L0.19 6.75C0.03 6.75 -0.06 6.94 0.04 7.07L6.75 15.69C7.06 16.1 7.67 16.1 7.98 15.69L19.95 0.31C20.05 0.19 19.96 0 19.8 0Z" fill="#000000" fill-opacity="1.000000" fill-rule="nonzero"/>
+                    </svg>
+                    <span>15% off welcome offer</span>
+                </li>
+                <li class="registration__list">
+                    <svg width="20.000000" height="16.000000" viewBox="0 0 20 16" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                        <desc>
+                                Created with Pixso.
+                        </desc>
+                        <defs/>
+                        <path id="Vector" d="M19.8 0L18.09 0C17.85 0 17.62 0.11 17.47 0.3L7.37 13.28L2.52 7.05C2.45 6.96 2.35 6.88 2.25 6.83C2.14 6.78 2.02 6.75 1.9 6.75L0.19 6.75C0.03 6.75 -0.06 6.94 0.04 7.07L6.75 15.69C7.06 16.1 7.67 16.1 7.98 15.69L19.95 0.31C20.05 0.19 19.96 0 19.8 0Z" fill="#000000" fill-opacity="1.000000" fill-rule="nonzero"/>
+                    </svg>
+                    <span>Free shipping, returns and exchanges on all orders</span>
+                </li>
+                <li class="registration__list">
+                    <svg width="20.000000" height="16.000000" viewBox="0 0 20 16" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                        <desc>
+                                Created with Pixso.
+                        </desc>
+                        <defs/>
+                        <path id="Vector" d="M19.8 0L18.09 0C17.85 0 17.62 0.11 17.47 0.3L7.37 13.28L2.52 7.05C2.45 6.96 2.35 6.88 2.25 6.83C2.14 6.78 2.02 6.75 1.9 6.75L0.19 6.75C0.03 6.75 -0.06 6.94 0.04 7.07L6.75 15.69C7.06 16.1 7.67 16.1 7.98 15.69L19.95 0.31C20.05 0.19 19.96 0 19.8 0Z" fill="#000000" fill-opacity="1.000000" fill-rule="nonzero"/>
+                    </svg>
+                    <span>$10 off a purchase on your birthday</span>
+                </li>
+                <li class="registration__list">
+                    <svg width="20.000000" height="16.000000" viewBox="0 0 20 16" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                        <desc>
+                                Created with Pixso.
+                        </desc>
+                        <defs/>
+                        <path id="Vector" d="M19.8 0L18.09 0C17.85 0 17.62 0.11 17.47 0.3L7.37 13.28L2.52 7.05C2.45 6.96 2.35 6.88 2.25 6.83C2.14 6.78 2.02 6.75 1.9 6.75L0.19 6.75C0.03 6.75 -0.06 6.94 0.04 7.07L6.75 15.69C7.06 16.1 7.67 16.1 7.98 15.69L19.95 0.31C20.05 0.19 19.96 0 19.8 0Z" fill="#000000" fill-opacity="1.000000" fill-rule="nonzero"/>
+                    </svg>
+                    <span>Early access to products</span>
+                </li>
+                <li class="registration__list">
+                    <svg width="20.000000" height="16.000000" viewBox="0 0 20 16" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                        <desc>
+                                Created with Pixso.
+                        </desc>
+                        <defs/>
+                        <path id="Vector" d="M19.8 0L18.09 0C17.85 0 17.62 0.11 17.47 0.3L7.37 13.28L2.52 7.05C2.45 6.96 2.35 6.88 2.25 6.83C2.14 6.78 2.02 6.75 1.9 6.75L0.19 6.75C0.03 6.75 -0.06 6.94 0.04 7.07L6.75 15.69C7.06 16.1 7.67 16.1 7.98 15.69L19.95 0.31C20.05 0.19 19.96 0 19.8 0Z" fill="#000000" fill-opacity="1.000000" fill-rule="nonzero"/>
+                    </svg>
+                    <span>Exclusive offers & rewards</span>
+                </li>
+            </ul>
         </div>
     </section>
     <section class="subscribe">
