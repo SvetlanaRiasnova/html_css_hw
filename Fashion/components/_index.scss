@@ -10,39 +10,43 @@ body {
 /*блок intro*/
 .intro {
     background-color: #F1E4E6;
-    width: 100%;
+    width: 100%;  
     &__container {
+        max-width: 1600px;
         margin: 0 auto;
         display: flex;
         flex-direction: row;
         justify-content: center;
     }
     &__image {
-        width: 100%;
+        width: 50%;
     }
     &__header {
-        width: 100%;
+        width: 50%;
         align-self: center;
         border-left: 12px solid $colorRed;
+        margin-left: 64px;
         padding-left: 16px;
         max-height: 93px;
         display: flex;
         flex-direction: column;
         justify-content: center;
-        align-items: start;
+        // align-items: flex-start;
     }
-}
-h1, h2 {
-    color: #222222;
-    font-weight: 700;
-    line-height: 0.008em;
-    letter-spacing: 0.08em;
-}
-h1 {
-    font-size: 48px;
-}
-h2 {
-    font-size: 32px;
+
+    h1, h2 {
+        color: #222222;
+        font-weight: 700;
+        line-height: 0.008em;
+        letter-spacing: 0.08em;
+    }
+
+    h1 {
+        font-size: 48px;
+    }
+    h2 {
+        font-size: 32px;
+    }
 }
 .header_red {
     color: $colorRed;
@@ -65,10 +69,7 @@ h2 {
     background-color: #FFFFFF;
     box-shadow: 6px 4px 35px rgba(0, 0, 0, 0.21);
 }
-.modal__top_part {
-    display: flex;
-    gap: 50px;
-}
+
 .modal__top_part a {
     text-decoration:none;
 }
@@ -273,15 +274,14 @@ h2 {
 /* block subscribe*/
 .subscribe {
     padding: 104px 230px 126px;
+    display: flex;
+    justify-content: center;
+    gap: 223px;
+    padding-bottom: 126px;
     background: linear-gradient(rgba(244, 244, 244, 0.7), rgba(244, 244, 244, 0.7)),
 		url(img/subscribe_img.png) bottom left/cover no-repeat;
-    &_container {
-        width: 1140px;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        margin: 0 auto;
-    }
+
+    
 }
 .sub_foto {
     width: 96px;
@@ -346,7 +346,6 @@ h2 {
 /* footer*/
 
 .footer {
-    max-width: 1600px;
     padding-left: 235px;
     padding-right: 230px;
     background-color: #222224;
@@ -365,6 +364,7 @@ h2 {
     display: flex;
     flex-direction: row;
     gap: 7px;
+    z-index: 10;
 }
 .icons_items:hover svg path {
     fill: #F16D7F;

@@ -84,8 +84,13 @@
         margin: 0;
         padding-top: 20px;
     }
+    &__form {
+        display: flex;
+        flex-direction: column;
+    }
     &__form_input {
         @include formInput;
+        min-width: 360px;
     }
     &__form_input:focus {
         color: rgb(177, 177, 177);

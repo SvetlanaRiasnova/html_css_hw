@@ -73,38 +73,36 @@ body {
   width: 100%;
 }
 .intro__container {
+  max-width: 1600px;
   margin: 0 auto;
   display: flex;
   flex-direction: row;
   justify-content: center;
 }
 .intro__image {
-  width: 100%;
+  width: 50%;
 }
 .intro__header {
-  width: 100%;
+  width: 50%;
   align-self: center;
   border-left: 12px solid #F16D7F;
+  margin-left: 64px;
   padding-left: 16px;
   max-height: 93px;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: start;
 }
-
-h1, h2 {
+.intro h1, .intro h2 {
   color: #222222;
   font-weight: 700;
   line-height: 0.008em;
   letter-spacing: 0.08em;
 }
-
-h1 {
+.intro h1 {
   font-size: 48px;
 }
-
-h2 {
+.intro h2 {
   font-size: 32px;
 }
 
@@ -129,11 +127,6 @@ h2 {
   transition: right 0.6s;
   background-color: #FFFFFF;
   box-shadow: 6px 4px 35px rgba(0, 0, 0, 0.21);
-}
-
-.modal__top_part {
-  display: flex;
-  gap: 50px;
 }
 
 .modal__top_part a {
@@ -369,14 +362,11 @@ h2 {
 /* block subscribe*/
 .subscribe {
   padding: 104px 230px 126px;
-  background: linear-gradient(rgba(244, 244, 244, 0.7), rgba(244, 244, 244, 0.7)), url(img/subscribe_img.png) bottom left/cover no-repeat;
-}
-.subscribe_container {
-  width: 1140px;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin: 0 auto;
+  justify-content: center;
+  gap: 223px;
+  padding-bottom: 126px;
+  background: linear-gradient(rgba(244, 244, 244, 0.7), rgba(244, 244, 244, 0.7)), url(img/subscribe_img.png) bottom left/cover no-repeat;
 }
 
 .sub_foto {
@@ -449,7 +439,6 @@ h2 {
 
 /* footer*/
 .footer {
-  max-width: 1600px;
   padding-left: 235px;
   padding-right: 230px;
   background-color: #222224;
@@ -470,6 +459,7 @@ h2 {
   display: flex;
   flex-direction: row;
   gap: 7px;
+  z-index: 10;
 }
 
 .icons_items:hover svg path {
@@ -648,7 +638,7 @@ h2 {
   .product__cards_prod {
     padding-bottom: 128px;
   }
-  .product__card:last-child {
+  .product__card_hidden {
     display: none;
   }
   .long_divider {
@@ -923,6 +913,10 @@ summary::-webkit-details-marker {
   margin: 0;
   padding-top: 20px;
 }
+.cart__form {
+  display: flex;
+  flex-direction: column;
+}
 .cart__form_input {
   max-width: 360px;
   height: 45px;
@@ -934,6 +928,7 @@ summary::-webkit-details-marker {
   font-weight: 300;
   line-height: 16px;
   outline: none;
+  min-width: 360px;
 }
 .cart__form_input:focus {
   color: rgb(177, 177, 177);
@@ -1017,31 +1012,31 @@ summary::-webkit-details-marker {
 
 /* media 768-1024*/
 @media (min-width: 768px) and (max-width: 1024px) {
+  /*index*/
   .header__container, .intro__container, .container {
     max-width: 768px;
-    padding-left: calc(50% - 376px);
-    padding-right: calc(50% - 376px);
+    margin: 0 auto;
   }
+  /*intro block*/
   .intro__container {
-    justify-content: start;
+    gap: 40px;
   }
-  .intro__image {
-    width: 50%;
+  .intro__image img {
+    width: 100%;
   }
   .intro__header {
-    width: 50%;
+    width: 100%;
     align-self: center;
     border-left: 12px solid #F16D7F;
+    margin-left: 0px;
   }
-  h1 {
+  .intro__header h1 {
     font-size: 44px;
   }
-  h2 {
+  .intro__header h2 {
     font-size: 24px;
   }
-  .container {
-    max-width: 768px;
-  }
+  /*block offers at the main page*/
   .offers {
     max-width: 768px;
     padding-top: 65px;
@@ -1071,6 +1066,7 @@ summary::-webkit-details-marker {
   .offer__header_red {
     font-size: 24px;
   }
+  /*product block*/
   .product__cards {
     padding-bottom: 32px;
     display: grid;
@@ -1083,6 +1079,7 @@ summary::-webkit-details-marker {
   .prod_img {
     width: 100%;
   }
+  /*.advantages*/
   .advantages {
     display: grid;
     gap: 48px;
@@ -1096,6 +1093,7 @@ summary::-webkit-details-marker {
     margin: 0px;
     padding-top: 0px;
   }
+  /*subscribe*/
   .subscribe {
     padding-top: 64px;
     padding-bottom: 140px;
@@ -1115,9 +1113,29 @@ summary::-webkit-details-marker {
   .subscribe_text {
     margin: 0;
   }
+  /*footer*/
   .footer {
     padding-left: 32px;
     padding-right: 32px;
+  }
+  /*registration page*/
+  .registration {
+    gap: 22px;
+  }
+  /*cart page*/
+  .cart {
+    flex-direction: column;
+    margin: auto;
+  }
+  .cart__cards {
+    margin: 0 auto;
+  }
+  .cart__forms {
+    display: flex;
+    flex-direction: row;
+  }
+  .cart__total_info {
+    margin-top: 60px;
   }
 }
 /* media 375-767*/
@@ -1135,9 +1153,7 @@ summary::-webkit-details-marker {
     display: none;
   }
   .intro {
-    width: 100%;
     min-height: 363px;
-    display: flex;
   }
   .intro__header {
     max-width: -moz-fit-content;
@@ -1232,6 +1248,33 @@ summary::-webkit-details-marker {
     flex-direction: column-reverse;
     gap: 40px;
   }
+  /*registration page*/
+  .registration {
+    flex-direction: column;
+    gap: 40px;
+  }
+  .registration__head {
+    font-size: 16px;
+  }
+  .registration__loyalty_text {
+    width: 358px;
+    font-size: 16px;
+  }
+  .registration__list {
+    display: flex;
+    align-items: center;
+    gap: 23px;
+    max-width: 356px;
+  }
+  .registration__list span {
+    display: block;
+    font-size: 16px;
+    max-width: 315px;
+  }
+  .registration .registration__head {
+    font-size: 16px;
+    line-height: 19px;
+  }
 }
 .registration {
   padding-top: 64px;
@@ -1243,7 +1286,7 @@ summary::-webkit-details-marker {
 .registration__form, .registration_form {
   display: flex;
   flex-direction: column;
-  max-width: 360px;
+  min-width: 360px;
   gap: 20px;
 }
 .registration_form-input {
@@ -1282,7 +1325,8 @@ summary::-webkit-details-marker {
   font-size: 13px;
   font-weight: 300;
   line-height: 16px;
-  width: 100%;
+  display: block;
+  width: 359px;
   margin-top: -5px;
   padding-bottom: 19px;
 }
@@ -1303,8 +1347,6 @@ summary::-webkit-details-marker {
 }
 .registration__loyalty, .registration__head {
   margin: 0;
-  color: rgb(0, 0, 0);
-  font-family: Lato;
   font-size: 24px;
   font-weight: 300;
   line-height: 29px;
@@ -1314,7 +1356,11 @@ summary::-webkit-details-marker {
 }
 .registration__lists {
   list-style-type: none;
+  padding-left: 0px;
 }
 .registration__list {
   padding-bottom: 16px;
+}
+.registration__list span {
+  padding-left: 8px;
 }/*# sourceMappingURL=style.css.map */
