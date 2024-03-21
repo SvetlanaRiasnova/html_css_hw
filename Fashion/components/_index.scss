@@ -19,10 +19,10 @@ body {
         justify-content: center;
     }
     &__image {
-        width: 50%;
+        width: 800px;
     }
     &__header {
-        width: 50%;
+        width: 800px;
         align-self: center;
         border-left: 12px solid $colorRed;
         margin-left: 64px;
@@ -155,7 +155,7 @@ body {
 /* блок product*/
 .products {
     text-align: center;
-    padding-bottom: 60px;
+    padding-bottom: 95px;
 }
 .prod_header {
     font-size: 30px;

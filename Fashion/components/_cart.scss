@@ -4,7 +4,6 @@
     display: flex;
     gap: 128px;
     &__cards {
-        width: 652px; 
         @include flexColumn;
         gap: 40px;
         margin: 0;
@@ -56,6 +55,10 @@
         padding-top: 32px;
         display: flex;
         justify-content: space-between;
+    }
+    &__cards_buttons {
+        gap: 9px;
+        justify-content: center;
     }
     &__cards_buttons button {
         width: 235px;

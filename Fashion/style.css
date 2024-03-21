@@ -80,10 +80,10 @@ body {
   justify-content: center;
 }
 .intro__image {
-  width: 50%;
+  width: 800px;
 }
 .intro__header {
-  width: 50%;
+  width: 800px;
   align-self: center;
   border-left: 12px solid #F16D7F;
   margin-left: 64px;
@@ -225,7 +225,7 @@ body {
 /* блок product*/
 .products {
   text-align: center;
-  padding-bottom: 60px;
+  padding-bottom: 95px;
 }
 
 .prod_header {
@@ -824,7 +824,6 @@ summary::-webkit-details-marker {
   gap: 128px;
 }
 .cart__cards {
-  width: 652px;
   display: flex;
   flex-direction: column;
   gap: 40px;
@@ -883,6 +882,10 @@ summary::-webkit-details-marker {
   padding-top: 32px;
   display: flex;
   justify-content: space-between;
+}
+.cart__cards_buttons {
+  gap: 9px;
+  justify-content: center;
 }
 .cart__cards_buttons button {
   width: 235px;
@@ -1010,8 +1013,108 @@ summary::-webkit-details-marker {
   background-color: #FFFFFF;
 }
 
+.registration {
+  padding-top: 64px;
+  padding-bottom: 96px;
+  display: flex;
+  margin: 0 auto;
+  justify-content: space-between;
+}
+.registration__form, .registration_form {
+  display: flex;
+  flex-direction: column;
+  min-width: 360px;
+  gap: 20px;
+}
+.registration_form-input {
+  max-width: 360px;
+  height: 45px;
+  background: rgb(255, 255, 255);
+  border: 1px solid rgb(164, 164, 164);
+  padding-left: 13px;
+  color: rgb(34, 34, 34);
+  font-size: 13px;
+  font-weight: 300;
+  line-height: 16px;
+  outline: none;
+  font-size: 13px;
+}
+.registration__loyalty {
+  width: 652px;
+}
+.registration__name, .registration__data {
+  color: rgb(34, 34, 34);
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 29px;
+  margin: 0;
+  color: rgb(34, 34, 34);
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 19px;
+}
+.registration__data {
+  padding-top: 13px;
+}
+.registration__gender {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  font-size: 11px;
+  font-weight: 300;
+  line-height: 13px;
+}
+.registration_text {
+  color: rgb(177, 177, 177);
+  font-family: Lato;
+  font-size: 13px;
+  font-weight: 300;
+  line-height: 16px;
+  display: block;
+  width: 359px;
+  margin-top: -5px;
+  padding-bottom: 19px;
+}
+.registration_button {
+  width: 167px;
+  height: 50px;
+  background: rgb(241, 109, 127);
+  color: rgb(255, 255, 255);
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 17px;
+  border: none;
+}
+.registration_button:hover {
+  border: 1px solid #F16D7F;
+  color: #F26376;
+  background-color: #FFFFFF;
+}
+.registration_button svg {
+  padding-left: 20px;
+}
+.registration__loyalty, .registration__head {
+  margin: 0;
+  font-size: 24px;
+  font-weight: 300;
+  line-height: 29px;
+}
+.registration__head {
+  margin: 0;
+}
+.registration__lists {
+  list-style-type: none;
+  padding-left: 0px;
+}
+.registration__list {
+  padding-bottom: 16px;
+}
+.registration__list span {
+  padding-left: 8px;
+}
+
 /* media 768-1024*/
-@media (min-width: 768px) and (max-width: 1024px) {
+@media (min-width: 768px) and (max-width: 1334px) {
   /*index*/
   .header__container, .intro__container, .container {
     max-width: 768px;
@@ -1020,15 +1123,17 @@ summary::-webkit-details-marker {
   /*intro block*/
   .intro__container {
     gap: 40px;
+    max-height: 369px;
   }
   .intro__image img {
-    width: 100%;
+    max-width: 384px;
+    margin: 0;
   }
   .intro__header {
-    width: 100%;
-    align-self: center;
-    border-left: 12px solid #F16D7F;
-    margin-left: 0px;
+    min-width: 384px;
+    margin: 0px;
+    line-height: 0.008em;
+    letter-spacing: 1em;
   }
   .intro__header h1 {
     font-size: 44px;
@@ -1039,8 +1144,8 @@ summary::-webkit-details-marker {
   /*block offers at the main page*/
   .offers {
     max-width: 768px;
-    padding-top: 65px;
-    padding-bottom: 106px;
+    padding-top: 20px;
+    padding-bottom: 154px;
     display: grid;
     grid-template-columns: repeat(3, 232px);
     grid-template-rows: 167px 116px;
@@ -1067,6 +1172,9 @@ summary::-webkit-details-marker {
     font-size: 24px;
   }
   /*product block*/
+  .products {
+    padding-bottom: 65px;
+  }
   .product__cards {
     padding-bottom: 32px;
     display: grid;
@@ -1095,7 +1203,7 @@ summary::-webkit-details-marker {
   }
   /*subscribe*/
   .subscribe {
-    padding-top: 64px;
+    padding-top: 54px;
     padding-bottom: 140px;
     display: flex;
     flex-direction: column;
@@ -1118,9 +1226,17 @@ summary::-webkit-details-marker {
     padding-left: 32px;
     padding-right: 32px;
   }
+  /*breadcrump block*/
+  .breadcrumb__header {
+    padding-left: 16px;
+  }
   /*registration page*/
   .registration {
     gap: 22px;
+    padding-top: 40px;
+  }
+  .registration__loyalty, .registration__head {
+    font-size: 16px;
   }
   /*cart page*/
   .cart {
@@ -1140,6 +1256,7 @@ summary::-webkit-details-marker {
 }
 /* media 375-767*/
 @media (min-width: 375px) and (max-width: 767px) {
+  /*header, all pages*/
   .header__container {
     max-width: 100%;
     padding-right: 16px;
@@ -1152,23 +1269,30 @@ summary::-webkit-details-marker {
   .user__profile, .cart_img, .intro__image {
     display: none;
   }
+  /*block intro, main page only*/
   .intro {
+    width: 100%;
     min-height: 363px;
+    display: flex;
   }
   .intro__header {
     max-width: -moz-fit-content;
     max-width: fit-content;
     display: flex;
   }
-  h1 {
+  .intro__header h1 {
     font-size: 38px;
   }
-  h2 {
+  .intro__header h2 {
     font-size: 20px;
   }
+  /*block offers, main page*/
   .offers {
     display: flex;
     flex-direction: column;
+    padding-top: 64px;
+    gap: 32px;
+    padding-bottom: 64px;
   }
   .offer__card {
     margin: 0 auto;
@@ -1190,6 +1314,7 @@ summary::-webkit-details-marker {
   .offer_header {
     margin-top: -10px;
   }
+  /*block products*/
   .products {
     padding-bottom: 96px;
   }
@@ -1224,8 +1349,9 @@ summary::-webkit-details-marker {
     margin: 0px;
     padding-top: 0px;
   }
+  /*subscribe block, all pages */
   .subscribe {
-    padding: 64px 0px 109px 0px;
+    padding: 54px 0px 109px 0px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -1243,15 +1369,66 @@ summary::-webkit-details-marker {
     font-size: 18px;
     padding: 0 10px;
   }
+  /*footer, all pages*/
   .footer {
     padding: 43px 32px 9px 32px;
     flex-direction: column-reverse;
     gap: 40px;
   }
+  /*breadcrums*/
+  .breadcrumb__container {
+    justify-content: center;
+    padding: 0px;
+  }
+  /* cart page*/
+  .cart {
+    flex-direction: column;
+    gap: 48px;
+  }
+  .cart__cards, .cart__forms {
+    flex-direction: column;
+  }
+  .cart__card_box {
+    width: 358px;
+  }
+  .cart__image {
+    width: 100%;
+  }
+  .cart__header {
+    font-size: 16px;
+    max-width: 143px;
+    line-height: 19px;
+  }
+  .cart__info {
+    font-size: 14px;
+    padding-top: 13px;
+    padding-bottom: 8px;
+    gap: 5px;
+    max-height: 188px;
+    line-height: 17px;
+  }
+  .cart__description {
+    gap: 4px;
+  }
+  .cart__close {
+    margin-left: -5px;
+    margin-top: 13px;
+    width: 10px;
+    height: 10px;
+  }
+  .cart__cards_buttons button {
+    width: 175px;
+    height: 33px;
+    color: rgb(87, 87, 87);
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 14px;
+  }
   /*registration page*/
   .registration {
     flex-direction: column;
     gap: 40px;
+    padding: 40px 8px;
   }
   .registration__head {
     font-size: 16px;
@@ -1275,92 +1452,4 @@ summary::-webkit-details-marker {
     font-size: 16px;
     line-height: 19px;
   }
-}
-.registration {
-  padding-top: 64px;
-  padding-bottom: 96px;
-  display: flex;
-  margin: 0 auto;
-  justify-content: space-between;
-}
-.registration__form, .registration_form {
-  display: flex;
-  flex-direction: column;
-  min-width: 360px;
-  gap: 20px;
-}
-.registration_form-input {
-  max-width: 360px;
-  height: 45px;
-  background: rgb(255, 255, 255);
-  border: 1px solid rgb(164, 164, 164);
-  padding-left: 13px;
-  color: rgb(34, 34, 34);
-  font-size: 13px;
-  font-weight: 300;
-  line-height: 16px;
-  outline: none;
-}
-.registration__loyalty {
-  width: 652px;
-}
-.registration__name, .registration__data {
-  color: rgb(34, 34, 34);
-  font-size: 24px;
-  font-weight: 400;
-  line-height: 29px;
-  margin: 0;
-}
-.registration__data {
-  padding-top: 13px;
-}
-.registration__gender {
-  display: flex;
-  flex-direction: row;
-  gap: 20px;
-}
-.registration_text {
-  color: rgb(177, 177, 177);
-  font-family: Lato;
-  font-size: 13px;
-  font-weight: 300;
-  line-height: 16px;
-  display: block;
-  width: 359px;
-  margin-top: -5px;
-  padding-bottom: 19px;
-}
-.registration_button {
-  width: 167px;
-  height: 50px;
-  background: rgb(241, 109, 127);
-  color: rgb(255, 255, 255);
-  font-size: 14px;
-  font-weight: 400;
-  line-height: 17px;
-  border: none;
-}
-.registration_button:hover {
-  border: 1px solid #F16D7F;
-  color: #F26376;
-  background-color: #FFFFFF;
-}
-.registration__loyalty, .registration__head {
-  margin: 0;
-  font-size: 24px;
-  font-weight: 300;
-  line-height: 29px;
-}
-.registration__head {
-  margin: 0;
-}
-.registration__lists {
-  list-style-type: none;
-  padding-left: 0px;
-}
-.registration__list {
-  padding-bottom: 16px;
-}
-.registration__list span {
-  padding-left: 8px;
 }/*# sourceMappingURL=style.css.map */

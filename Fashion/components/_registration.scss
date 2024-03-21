@@ -12,12 +12,17 @@
     }
     &_form-input {
         @include formInput;
+        font-size: 13px;
     }
     &__loyalty {
         width: 652px;
     }
     &__name, &__data {
         @include formsHeader;
+        color: rgb(34, 34, 34);
+        font-size: 16px;
+        font-weight: 300;
+        line-height: 19px;
     }
     &__data {
         padding-top: 13px;
@@ -26,6 +31,9 @@
         display: flex;
         flex-direction: row;
         gap: 20px;
+        font-size: 11px;
+        font-weight: 300;
+        line-height: 13px;
     }
     &_text {
         color: rgb(177, 177, 177);
@@ -51,6 +59,9 @@
             border: 1px solid #F16D7F;
             color: #F26376;
             background-color: #FFFFFF;
+        }
+        & svg {
+            padding-left: 20px;
         }
     }
  //registration__loyalty

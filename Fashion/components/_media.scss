@@ -1,36 +1,36 @@
 /* media 768-1024*/
-@media (min-width: 768px) and (max-width: 1024px) {
-
-    /*index*/
+@media (min-width: 768px) and (max-width: 1334px) {
+/*index*/
     .header__container, .intro__container, .container {
         max-width: 768px;
         margin: 0 auto;
     }
-
-    /*intro block*/
+/*intro block*/
     .intro__container {
         gap: 40px;
+        max-height: 369px;
     }
     .intro__image img {
-        width: 100%;
+        max-width: 384px;
+        margin: 0;
     }
     .intro__header {
-        width: 100%;
-        align-self: center;
-        border-left: 12px solid #F16D7F;
-        margin-left: 0px;
+        min-width: 384px;
+        margin: 0px;
+        line-height: 0.008em;
+        letter-spacing: 1em;
         h1 {
             font-size: 44px;
         }
         h2 {
             font-size: 24px;
-        }
+        }    
     }
-    /*block offers at the main page*/
+/*block offers at the main page*/
     .offers {
         max-width: 768px;
-        padding-top: 65px;
-        padding-bottom: 106px;
+        padding-top: 20px;
+        padding-bottom: 154px;
         display: grid;
         grid-template-columns: repeat(3, 232px);
         grid-template-rows: 167px 116px;
@@ -56,7 +56,10 @@
     .offer__header_red {
         font-size: 24px;    
     }
-    /*product block*/
+/*product block*/
+    .products {
+        padding-bottom: 65px;
+    }
     .product__cards {
         padding-bottom: 32px;
         display: grid;
@@ -69,7 +72,7 @@
     .prod_img {
         width: 100%;
     }
-    /*.advantages*/ 
+/*.advantages*/ 
     .advantages {
         display: grid;
         gap: 48px;
@@ -83,9 +86,9 @@
         margin: 0px;
         padding-top: 0px;
     }
-    /*subscribe*/
+/*subscribe*/
     .subscribe {
-        padding-top: 64px;
+        padding-top: 54px;
         padding-bottom: 140px;
         display: flex;
         flex-direction: column;
@@ -104,16 +107,24 @@
     .subscribe_text {
         margin: 0;
     }
-    /*footer*/
+/*footer*/
     .footer {
         padding-left: 32px;
         padding-right: 32px;
     }
-    /*registration page*/
+/*breadcrump block*/ 
+    .breadcrumb__header {
+        padding-left: 16px;
+    }
+/*registration page*/
     .registration {
         gap: 22px;
+        padding-top: 40px;  
+        &__loyalty, &__head  {
+            font-size: 16px;
+        }      
     }
-    /*cart page*/ 
+/*cart page*/ 
     .cart {
         flex-direction: column;
         margin: auto;
@@ -130,9 +141,10 @@
     }
 }
 
+
 /* media 375-767*/
 @media (min-width: 375px) and (max-width: 767px) {
-
+/*header, all pages*/
     .header__container {
         max-width: 100%;
         padding-right: 16px;
@@ -145,24 +157,29 @@
     .user__profile, .cart_img, .intro__image {
         display: none;
     }
+/*block intro, main page only*/
     .intro {
-        // width: 100%;
+        width: 100%;
         min-height: 363px;
-        // display: flex;
+        display: flex;
     }
     .intro__header {
         max-width: fit-content;
-        display: flex;
+        display: flex;   
+        h1 {
+            font-size: 38px;
+        }
+        h2 {
+            font-size: 20px;
+        }
     }
-    h1 {
-        font-size: 38px;
-    }
-    h2 {
-        font-size: 20px;
-    }
+/*block offers, main page*/
     .offers {
         display: flex;
         flex-direction: column;
+        padding-top: 64px;
+        gap: 32px;
+        padding-bottom: 64px;
     }
     .offer__card {
         margin: 0 auto;
@@ -176,7 +193,6 @@
     .large {
         width: 343px;
         height: 111px;
-
     }
     .large .offer_img  {
         width: 100%;
@@ -185,6 +201,7 @@
     .offer_header {
         margin-top:  -10px;
     }
+/*block products*/
     .products {
         padding-bottom: 96px;
     }
@@ -219,8 +236,9 @@
         margin: 0px;
         padding-top: 0px;
     }
+/*subscribe block, all pages */
     .subscribe {
-        padding:  64px 0px 109px 0px;
+        padding:  54px 0px 109px 0px;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -239,15 +257,67 @@
         font-size: 18px;
         padding: 0 10px;
     }
+/*footer, all pages*/
     .footer {
         padding: 43px 32px 9px 32px;
         flex-direction: column-reverse;
         gap: 40px;
     }
-    /*registration page*/
+/*breadcrums*/
+    .breadcrumb__container {
+        justify-content: center;
+        padding: 0px;
+    }
+/* cart page*/ 
+    .cart {
+        flex-direction: column;
+        gap: 48px;
+        &__cards, &__forms {
+            flex-direction: column;
+        }
+        &__card_box {
+            width: 358px;
+
+        }
+        &__image{
+            width: 100%;
+        }
+        &__header {
+            font-size: 16px;
+            max-width: 143px;
+            line-height: 19px;
+        }
+        &__info {
+            font-size: 14px;
+            padding-top: 13px;
+            padding-bottom: 8px;
+            gap: 5px;
+            max-height: 188px;
+            line-height: 17px;
+        }
+        &__description {
+            gap: 4px;
+        }
+        &__close {
+            margin-left: -5px;
+            margin-top: 13px;
+            width: 10px;
+            height: 10px;
+        }
+        &__cards_buttons button {
+            width: 175px;
+            height: 33px;
+            color: rgb(87, 87, 87);
+            font-size: 12px;
+            font-weight: 400;
+            line-height: 14px;
+        }
+    }
+/*registration page*/
     .registration {
         flex-direction: column;
         gap: 40px;
+        padding: 40px 8px;
         &__head {
             font-size: 16px;
         }
