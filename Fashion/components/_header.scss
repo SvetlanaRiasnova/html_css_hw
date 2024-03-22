@@ -1,8 +1,13 @@
   
+// .container {
+//     width: 100%;
+//     max-width: 100%;
+//   }
 /*блок header*/
 .header {
     background-color: #222222;
     max-height: 75px;
+    position: relative;
     &__container {
         margin: 0 auto;
         max-width: 1140px;

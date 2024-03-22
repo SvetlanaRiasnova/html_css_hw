@@ -9,6 +9,7 @@
 .header {
   background-color: #222222;
   max-height: 75px;
+  position: relative;
 }
 .header__container {
   margin: 0 auto;
@@ -59,12 +60,16 @@
   opacity: 0.9;
 }
 
-html, body {
+body {
   overflow-x: hidden;
 }
 
 body {
   font-family: "Lato", sans-serif;
+}
+
+html {
+  overflow-x: hidden;
 }
 
 /*блок intro*/
