@@ -20,29 +20,32 @@
                     <img src="icons/search.svg" alt="search" class="search">
                 </a>
             </div>
-            <div class="header__buttons badge">
-                <label for="check">
+            <div class="header__buttons ">
+                <label for="check" class="header__burger">
                     <img  src="icons/burger_menu.svg" alt="burger_menu">
                 </label>
                 <a href="#" class="user__profile">
                     <img src="icons/user_profile.svg" alt="user_profile">
                 </a>
-                <a href="#" class="cart_img ">
+                <a href="/cart.html" class="cart_img ">
                     <img src="icons/cart.svg" alt="cart">
+                    <div class="badge">
+                        <span>5</span>
+                    </div>
                 </a>
             </div>
             <input id="check" class="burger_checkbox" type="checkbox">
-            <div class="modal_menu">
+            <div class="modal__menu">
                 
                 <div class="modal__top_part">
                     <h2 class="modal__menu_header">MENU</h2>
                     <label class="close" for="check">
-                        x
-                        </label>
+                            <img src="icons/close.svg" class="cart__close-btn" alt="close button">
+                    </label>
                 </div>
                 <nav > 
                     <div class="modal__menu_list">
-                      <div >
+                      <div class="modal__menu_block">
                         <a href="#" class="menu_header">MAN</a>
                         <div class="modal__menu_items">
                             <div class="modal__menu_item"><a href="#">Accessories</a></div>
@@ -84,32 +87,32 @@
             </div>
             <div class="intro__header">
                 <h1>THE BRAND</h1>
-                <h2>OF LUXERIOUS <span class="header_red">FASHION</span></h2>
+                <h2>OF LUXERIOUS <span class="intro__header_red">FASHION</span></h2>
             </div>
         </div>
     </div>
-    <div class="offers container">
+    <section class="offer container">
         <div class="offer__card">
             <img src="img/for_women.png" alt="for_women" class="offer_img">
-            <span class="offer_header">30% OFF</span>
+            <span class="offer__header">30% OFF</span>
             <h3 class="offer__header_red">FOR   WOMEN</h3>
         </div>
         <div class="offer__card">
             <img src="img/for_men.jpg" alt="for_men" class="offer_img">
-            <span class="offer_header">HOT DEAL</span>
+            <span class="offer__header">HOT DEAL</span>
             <h3 class="offer__header_red">FOR MEN</h3>
         </div>
         <div class="offer__card">
             <img src="img/for_kids.jpg" alt="for_kids" class="offer_img">
-            <span class="offer_header">NEW ARRIVALS</span>
+            <span class="offer__header">NEW ARRIVALS</span>
             <h3 class="offer__header_red">FOR KIDS</h3>
         </div>
-        <div class="offer__card large">
+        <div class="offer__card offer__card-large">
             <img src="img/accesories.jpg" alt="accesories" class="offer_img">
-            <span class="offer_header">LUXIROUS & TRENDY</span>
+            <span class="offer__header">LUXIROUS & TRENDY</span>
             <h3 class="offer__header_red">ACCESORIES</h3>
         </div>
-    </div>
+    </section>
     <div class="products container">
         <h2 class="prod_header">
             Fetured Items
@@ -117,7 +120,6 @@
         <p class="prod_block_description">Shop for items based on what we featured in this week</p>
         <div class="product__cards">
             <div class="product__card">
-                
                 <div class="prod_image">
                     <div class="prod_back">
                         <button class="prod_img_btn" type="button">

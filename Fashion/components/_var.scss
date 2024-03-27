@@ -11,23 +11,23 @@ $colorRed: #F16D7F;
     display: flex;
     flex-direction: column;
   }
-  @mixin formsHeader {
-    color: rgb(34, 34, 34);
-    font-size: 24px;
-    font-weight: 400;
-    line-height: 29px;
-    margin: 0;
-  }
+@mixin formsHeader {
+  color: rgb(34, 34, 34);
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 29px;
+  margin: 0;
+}
 
-  @mixin formInput {
-    max-width: 360px;
-    height: 45px;
-    background: rgb(255, 255, 255);
-    border: 1px solid rgb(164, 164, 164);
-    padding-left: 13px;
-    color: rgb(34, 34, 34);
-    font-size: 13px;
-    font-weight: 300;
-    line-height: 16px;
-    outline: none;
-  }
+@mixin formInput {
+  max-width: 360px;
+  height: 45px;
+  background: rgb(255, 255, 255);
+  border: 1px solid rgb(164, 164, 164);
+  padding-left: 13px;
+  color: rgb(34, 34, 34);
+  font-size: 13px;
+  font-weight: 300;
+  line-height: 16px;
+  outline: none;
+}

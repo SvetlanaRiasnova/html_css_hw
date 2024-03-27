@@ -9,7 +9,6 @@
     rel="stylesheet"
     href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
     />
-
     <title>Product</title>
 </head>
 <body>
@@ -25,28 +24,31 @@
                     <img src="icons/search.svg" alt="search" class="search">
                 </a>
             </div>
-            <div class="header__buttons badge">
-                <label for="check">
+            <div class="header__buttons ">
+                <label for="check" class="header__burger">
                     <img  src="icons/burger_menu.svg" alt="burger_menu">
                 </label>
                 <a href="#" class="user__profile">
                     <img src="icons/user_profile.svg" alt="user_profile">
                 </a>
-                <a href="#" class="cart_img ">
+                <a href="/cart.html" class="cart_img ">
                     <img src="icons/cart.svg" alt="cart">
+                    <div class="badge">
+                        <span>5</span>
+                    </div>
                 </a>
             </div>
             <input id="check" class="burger_checkbox" type="checkbox">
-            <div class="modal_menu">
+            <div class="modal__menu">
                 <div class="modal__top_part">
                     <h2 class="modal__menu_header">MENU</h2>
                     <label class="close" for="check">
-                        x
-                        </label>
+                            <img src="icons/close.svg" class="cart__close-btn" alt="close button">
+                    </label>
                 </div>
                 <nav > 
                     <div class="modal__menu_list">
-                      <div >
+                      <div class="modal__menu_block">
                         <a href="#" class="menu_header">MAN</a>
                         <div class="modal__menu_items">
                             <div class="modal__menu_item"><a href="#">Accessories</a></div>
@@ -81,16 +83,16 @@
             </div>
         </div>
     </header>
-    <div class="breadcrumb">
+    <div class="breadcrumbs">
         <div class="breadcrumb__container">
             <h1 class="breadcrumb__header" >NEW ARRIVALS </h1>
-            <div class="breadcrumb__path">
-                <a href="" class="breadcrumb__path_item">HOME</a>
-                <p>/</p>
-                <a href="" class="breadcrumb__path_item">MEN</a>
-                <p>/</p>
-                <a href="" class="breadcrumb__path_item">NEW ARRIVALS </a>
-            </div>
+            <nav class="breadcrumb">
+                <ul class="breadcrumb__ul">
+                    <li class="breadcrumb__li"><a href="#" class="breadcrumb__path_item">HOME</a></li>
+                    <li class="breadcrumb__li"><a href="#" class="breadcrumb__path_item">MEN</a></li>
+                    <li class="breadcrumb__li"><a href="#" class="breadcrumb__path_item">NEW ARRIVALS </a></li>
+                </ul>
+            </nav>
         </div>
     </div>
     <div class="swiper mySwiper">
@@ -116,20 +118,44 @@
             <span class="product__descr">Compellingly actualize fully researched processes before proactive outsourcing.<br> Progressively syndicate collaborative architectures before cutting-edge services. Completely visualize parallel core competencies rather than exceptional portals. </span>
             <span class="product__price">$561</span>
             <hr class="long_divider">
-            <menu class="products__sort">
-                <div class="products__sort_item">
-                    <span>CHOOSE COLOR</span>
-                    <img src="icons/arrow_down.svg" alt="arrow down">
-                </div>
-                <div class="products__sort_item">
-                    <span>CHOOSE SIZE</span>
-                    <img src="icons/arrow_down.svg" alt="arrow down">
-                </div>
-                <div class="products__sort_item">
-                    <span>QUANTITY</span>
-                    <img src="icons/arrow_down.svg" alt="arrow down">
-                </div>
-            </menu>
+            <div class="products__sort">
+                <details class="sort__details">
+                    <summary class="sort__summary"><span class="sort__heading">CHOOSE COLOR</span><svg  class="sort__arrow" width="10.020020" height="5.003906" viewBox="0 0 10.02 5.00391" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"> 
+                        <path id="Vector" d="M5.0022 5.0022C4.83521 5.00244 4.67334 4.94434 4.54492 4.83789L0.258057 1.26538C0.112305 1.14429 0.0205078 0.969971 0.00292969 0.781006C-0.0144043 0.592041 0.0439453 0.404053 0.165283 0.258057C0.286377 0.112305 0.460693 0.0205078 0.649658 0.00292969C0.838623 -0.0144043 1.02661 0.0439453 1.17261 0.165283L5.0022 3.36597L8.83179 0.279541C8.90479 0.220215 8.98877 0.175781 9.0791 0.14917C9.16943 0.122314 9.26392 0.11377 9.35767 0.123779C9.45117 0.133545 9.54199 0.162109 9.62451 0.207275C9.70728 0.252197 9.78003 0.313232 9.83911 0.386719C9.90454 0.460205 9.9541 0.546387 9.98462 0.639893C10.0151 0.733398 10.0261 0.832275 10.0168 0.930176C10.0073 1.02808 9.97778 1.12305 9.92993 1.20898C9.88232 1.29492 9.81714 1.37012 9.73901 1.42993L5.45215 4.88062C5.32007 4.97046 5.16162 5.01318 5.0022 5.0022Z" fill="#6F6E6E" fill-opacity="1.000000" fill-rule="nonzero"/>
+                    </svg>
+                    </summary>
+                </details>
+                <details class="sort__details">
+                    <summary class="sort__summary"><span class="sort__heading">SIZE</span><svg  class="sort__arrow" width="10.020020" height="5.003906" viewBox="0 0 10.02 5.00391" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"> 
+                        <path id="Vector" d="M5.0022 5.0022C4.83521 5.00244 4.67334 4.94434 4.54492 4.83789L0.258057 1.26538C0.112305 1.14429 0.0205078 0.969971 0.00292969 0.781006C-0.0144043 0.592041 0.0439453 0.404053 0.165283 0.258057C0.286377 0.112305 0.460693 0.0205078 0.649658 0.00292969C0.838623 -0.0144043 1.02661 0.0439453 1.17261 0.165283L5.0022 3.36597L8.83179 0.279541C8.90479 0.220215 8.98877 0.175781 9.0791 0.14917C9.16943 0.122314 9.26392 0.11377 9.35767 0.123779C9.45117 0.133545 9.54199 0.162109 9.62451 0.207275C9.70728 0.252197 9.78003 0.313232 9.83911 0.386719C9.90454 0.460205 9.9541 0.546387 9.98462 0.639893C10.0151 0.733398 10.0261 0.832275 10.0168 0.930176C10.0073 1.02808 9.97778 1.12305 9.92993 1.20898C9.88232 1.29492 9.81714 1.37012 9.73901 1.42993L5.45215 4.88062C5.32007 4.97046 5.16162 5.01318 5.0022 5.0022Z" fill="#6F6E6E" fill-opacity="1.000000" fill-rule="nonzero"/>
+                    </svg>
+                    </summary>
+                    <div class="sort__box">
+                        <div class="sort__checkbox">
+                            <input id="sort__check1" type="checkbox">
+                            <label for="sort__check1">XS</label>
+                        </div>
+                        <div class="sort__checkbox">
+                            <input id="sort__check2" type="checkbox">
+                            <label for="sort__check2">S</label>
+                        </div>
+                        <div class="sort__checkbox">
+                            <input id="sort__check3" type="checkbox">
+                            <label for="sort__check3">M</label>
+                        </div>
+                        <div class="sort__checkbox">
+                            <input id="sort__check4" type="checkbox">
+                            <label for="sort__check4">L</label>
+                        </div>
+                    </div>
+                </details>
+                <details class="sort__details">
+                    <summary class="sort__summary"><span class="sort__heading">QUANTITY</span><svg  class="sort__arrow" width="10.020020" height="5.003906" viewBox="0 0 10.02 5.00391" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"> 
+                        <path id="Vector" d="M5.0022 5.0022C4.83521 5.00244 4.67334 4.94434 4.54492 4.83789L0.258057 1.26538C0.112305 1.14429 0.0205078 0.969971 0.00292969 0.781006C-0.0144043 0.592041 0.0439453 0.404053 0.165283 0.258057C0.286377 0.112305 0.460693 0.0205078 0.649658 0.00292969C0.838623 -0.0144043 1.02661 0.0439453 1.17261 0.165283L5.0022 3.36597L8.83179 0.279541C8.90479 0.220215 8.98877 0.175781 9.0791 0.14917C9.16943 0.122314 9.26392 0.11377 9.35767 0.123779C9.45117 0.133545 9.54199 0.162109 9.62451 0.207275C9.70728 0.252197 9.78003 0.313232 9.83911 0.386719C9.90454 0.460205 9.9541 0.546387 9.98462 0.639893C10.0151 0.733398 10.0261 0.832275 10.0168 0.930176C10.0073 1.02808 9.97778 1.12305 9.92993 1.20898C9.88232 1.29492 9.81714 1.37012 9.73901 1.42993L5.45215 4.88062C5.32007 4.97046 5.16162 5.01318 5.0022 5.0022Z" fill="#6F6E6E" fill-opacity="1.000000" fill-rule="nonzero"/>
+                    </svg>
+                    </summary>
+                </details>
+            </div>
             <button class="add_to_cart_btn" type="button">
                 <svg width="31.994141" height="29.000000" viewBox="0 0 31.9941 29" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                     <defs/>

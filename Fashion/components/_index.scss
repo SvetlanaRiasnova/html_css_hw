@@ -10,6 +10,11 @@ body {
 html {
     overflow-x: hidden;
 }
+.container {
+    margin: 0 auto;
+    width: 1140px;
+}
+
 /*блок intro*/
 .intro {
     background-color: #F1E4E6;
@@ -31,36 +36,31 @@ html {
         margin-left: 64px;
         padding-left: 16px;
         max-height: 93px;
-        display: flex;
-        flex-direction: column;
+        @include flexColumn;
         justify-content: center;
-        // align-items: flex-start;
     }
 
-    h1, h2 {
+    & h1, h2 {
         color: #222222;
         font-weight: 700;
         line-height: 0.008em;
         letter-spacing: 0.08em;
     }
 
-    h1 {
+    & h1 {
         font-size: 48px;
     }
-    h2 {
+    & h2 {
         font-size: 32px;
     }
-}
-.header_red {
-    color: $colorRed;
-}
-.container {
-    margin: 0 auto;
-    width: 1140px;
+    &__header_red {
+        color: $colorRed;
+    }
 }
 
+
 /* modal menu*/
-.modal_menu {
+.modal__menu {
     z-index: 50;
     position: absolute;
     padding: 32px;
@@ -71,43 +71,52 @@ html {
     transition: right 0.6s;
     background-color: #FFFFFF;
     box-shadow: 6px 4px 35px rgba(0, 0, 0, 0.21);
+    &_list a {
+        text-decoration:none;
+        color: #6F6E6E;
+      } 
+    &_header {
+        font-size: 14px;
+        text-transform: uppercase;
+        // padding-bottom: 24px;
+        padding-left: 33px;
+    }
+    &_block {
+        padding-top: 24px;
+    }
+    &_list {
+        display: flex;
+        flex-direction: column;
+        row-gap: 20px;
+    }
+    &_items {
+        display: grid;
+        gap: 11px;
+        padding-top: 12px;
+        padding-bottom: 12px;
+    }
+    &_item {
+        padding-left: 53px;
+    }
 }
 
-.modal__top_part a {
+.modal__top_part {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    &_part a {
     text-decoration:none;
+    }
 }
-.modal__menu_list a {
-    text-decoration:none;
-    color: #6F6E6E;
-  } 
+
 .menu_header {
     color: #F16D7F ! important;
     font-size: 14px;
     padding-left: 32px;
-    padding-bottom: 12px;
-}
-.modal__menu_header {
-    font-size: 14px;
-    text-transform: uppercase;
-    padding-bottom: 24px;
-    padding-left: 33px;
-}
-.modal__menu_list {
-    display: flex;
-    flex-direction: column;
-    row-gap: 20px;
-}
-.modal__menu_items {
-    display: grid;
-    gap: 11px;
-    padding-bottom: 12px;
-}
-.modal__menu_item {
-    padding-left: 53px;
 }
 
 /* блок offer*/
-.offers {
+.offer {
     padding-top: 65px;
     padding-bottom: 96px;
     display: grid;
@@ -116,43 +125,43 @@ html {
     gap: 30px;
     grid-row-gap: 30px;
     justify-content: center;
-}
-.offer__card {
-    width: 360px;
-    height: 100%;
-    position: relative;
-}
-.offer_img {
-    position: absolute;
-}
-.offer_header {
-    font-size: 16px;
-    font-weight: 700;
-    color: #FFFFFF;    
-    position: absolute;
-    z-index: 1;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-}
-.large {
-    width: 1140px;
-    grid-row-start: 2;
-    grid-row-end: 2;
-    grid-column-start: 1;
-    grid-column-end: 3;
-}
-.offer__header_red {
-    font-size: 24px;    
-    font-weight: 700;
-    position: absolute;
-    z-index: 1;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    color: #F16D7F;
-    width: 100%;
-    text-align: center;
+    &__card {
+        width: 360px;
+        height: 100%;
+        position: relative;
+        &-large{
+            width: 1140px;
+            grid-row-start: 2;
+            grid-row-end: 2;
+            grid-column-start: 1;
+            grid-column-end: 3;
+        }
+    }
+    &_img {
+        position: absolute;
+    }
+    &__header {
+        font-size: 16px;
+        font-weight: 700;
+        color: #FFFFFF;    
+        position: absolute;
+        z-index: 1;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        &_red {
+            font-size: 24px;    
+            font-weight: 700;
+            position: absolute;
+            z-index: 1;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            color: #F16D7F;
+            width: 100%;
+            text-align: center;
+        }
+    }
 }
 
 /* блок product*/
@@ -178,7 +187,7 @@ html {
 .product__cards {
     padding-bottom: 48px;
     display: grid;
-    grid-template-columns: repeat(3, auto);
+    grid-template-columns: repeat(auto-fit, minmax(360px, 3fr));
     grid-gap: 30px;
 }
 .product__card {
